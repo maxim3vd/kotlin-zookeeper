@@ -1,25 +1,14 @@
-val camel = """
-    Switching on the camera in the camel habitat...
-     ___.-''''-.
-    /___  @    |
-    ',,,,.     |         _.'''''''._
-         '     |        /           \
-         |     \    _.-'             \
-         |      '.-'                  '-.
-         |                               ',
-         |                                '',
-          ',,-,                           ':;
-               ',,| ;,,                 ,' ;;
-                  ! ; !'',,,',',,,,'!  ;   ;:
-                 : ;  ! !       ! ! ;  ;   :;
-                 ; ;   ! !      ! !  ; ;   ;,
-                ; ;    ! !     ! !   ; ;
-                ; ;    ! !    ! !     ; ;
-               ;,,      !,!   !,!     ;,;
-               /_I      L_I   L_I     /_I
-    Look at that! Our little camel is sunbathing!
-""".trimIndent()
+import animals
 
 fun main() {
-    println(camel)
+    print("Please enter the number of the habitat you would like to view: ")
+    val numHabitat: Int = readln().toInt()
+
+    val animal: String = animals[numHabitat]
+    println("\n$animal")
+
+    println("""
+        ---
+        You've reached the end of the program. To check another habitat, please restart the watcher.
+    """.trimIndent())
 }
