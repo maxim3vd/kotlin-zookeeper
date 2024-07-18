@@ -1,14 +1,16 @@
 import animals
 
 fun main() {
-    print("Please enter the number of the habitat you would like to view: ")
-    val numHabitat: Int = readln().toInt()
+    do {
+        print("Please enter the number of the habitat you would like to view: ")
+        val userChoice: String = readln()
+        val numHabitat: Int? = userChoice.toIntOrNull()
 
-    val animal: String = animals[numHabitat]
-    println("\n$animal")
+        if (numHabitat != null) {
+            val animal: String = animals[numHabitat]
+            println("\n$animal")
+        }
+    } while (numHabitat != null)
 
-    println("""
-        ---
-        You've reached the end of the program. To check another habitat, please restart the watcher.
-    """.trimIndent())
+    println("See you later!")
 }
