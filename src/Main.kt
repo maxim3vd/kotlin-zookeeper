@@ -7,8 +7,5 @@ fun main() {
     val animal: String = animals[numHabitat]
     println("\n$animal")
 
-    println("""
-        ---
-        You've reached the end of the program. To check another habitat, please restart the watcher.
-    """.trimIndent())
+    println("See you later!")
 }
