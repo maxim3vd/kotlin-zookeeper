@@ -2,10 +2,13 @@ import animals
 
 fun main() {
     print("Please enter the number of the habitat you would like to view: ")
-    val numHabitat: Int = readln().toInt()
+    val userChoice: String = readln()
+    val numHabitat: Int? = userChoice.toIntOrNull()
 
-    val animal: String = animals[numHabitat]
-    println("\n$animal")
+    if (numHabitat != null) {
+        val animal: String = animals[numHabitat]
+        println("\n$animal")
+    }
 
     println("See you later!")
 }
